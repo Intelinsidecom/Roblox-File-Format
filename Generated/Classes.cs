@@ -3373,7 +3373,7 @@ namespace RobloxFiles
         public float Scale = 1;
         public KeyCode SecondaryModifier = KeyCode.Unknown;
         public GuiButton UIButton = null;
-        public GuiButton UIModifier;
+        public GuiButton UIModifier = null;
         public KeyCode Up = KeyCode.Unknown;
         public Vector2 Vector2Scale = Vector2.one;
         public Vector3 Vector3Scale = Vector3.one;
@@ -5306,7 +5306,7 @@ namespace RobloxFiles
     public class ControllerPartSensor : ControllerSensor
     {
         public CFrame HitFrame = CFrame.identity;
-        public Vector3 HitNormal = Vector3.zero;
+        public Vector3 HitNormal = Vector3.yAxis;
         public float LadderSearchHeight = 6;
         public float LadderSearchOffset = 5;
         public float SearchDistance = 0;
