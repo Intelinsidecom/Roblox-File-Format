@@ -1,5 +1,5 @@
 // Auto-generated list of creatable Roblox classes.
-// Updated as of 0.722.0.7221024
+// Updated as of 0.724.0.7240739
 
 using System;
 
@@ -20,9 +20,6 @@ namespace RobloxFiles
     public class EditableMesh : RbxObject
     {
         public SharedString MeshData = SharedString.None;
-
-        [Obsolete]
-        public bool SkinningEnabled;
     }
 
     public class AccessoryDescription : Instance
@@ -457,7 +454,6 @@ namespace RobloxFiles
     public class AudioSpeechToText : Instance
     {
         public bool Enabled;
-        public bool IsDictationEnabled;
         public string Text = "";
     }
 
@@ -502,11 +498,16 @@ namespace RobloxFiles
     {
         public AvatarSettingsCharacterControllerMode CharacterControllerMode = AvatarSettingsCharacterControllerMode.LegacyHumanoid;
         public bool EnableClimbing;
+        public bool EnableCrouching;
         public bool EnableFallingDown;
         public bool EnableGettingUp;
+        public bool EnableHolding;
         public bool EnableJumping;
+        public bool EnableReaching;
         public bool EnableRunning;
         public bool EnableSitting;
+        public bool EnableSprinting;
+        public bool EnableStrafing;
         public bool EnableSwimming;
     }
 
@@ -1260,7 +1261,11 @@ namespace RobloxFiles
 
     public class AnimationConstraint : Constraint
     {
+        public float AngularDamping = 1;
+        public float AngularStrength = 1;
         public bool IsKinematic;
+        public float LinearDamping = 1;
+        public float LinearStrength = 1;
         public float MaxForce = 10000;
         public float MaxTorque = 10000;
         public CFrame Transform = CFrame.identity;
@@ -1778,6 +1783,11 @@ namespace RobloxFiles
 
     [RbxService]
     public class DeferredAssetManagerService : Instance
+    {
+    }
+
+    [RbxService]
+    public class DesignFoundationsService : Instance
     {
     }
 
@@ -3389,8 +3399,6 @@ namespace RobloxFiles
     [RbxService]
     public class InsertService : Instance
     {
-        public bool AllowClientInsertModels;
-
         [Obsolete]
         public bool AllowInsertFreeModels;
     }
@@ -4538,6 +4546,8 @@ namespace RobloxFiles
         public Vector3 GlobalWind = Vector3.zero;
         public float Gravity = 196.2f;
         public IKControlConstraintSupport IKControlConstraintSupport = IKControlConstraintSupport.Default;
+        public RolloutState ImprovedAnimationConstraint = RolloutState.Default;
+        public RolloutState ImprovedPhysicsReplication = RolloutState.Default;
         public RolloutState LayeredClothingCacheOptimizations = RolloutState.Default;
         public LuauTypeCheckMode LuauTypeCheckMode = LuauTypeCheckMode.Default;
         public MeshPartHeadsAndAccessories MeshPartHeadsAndAccessories = MeshPartHeadsAndAccessories.Default;
@@ -6441,6 +6451,7 @@ namespace RobloxFiles
     {
         public UDim BlurRadius = new UDim();
         public Color3 Color = new Color3();
+        public bool Enabled;
         public UDim2 Offset = new UDim2();
         public UDim2 Spread = new UDim2();
         public float Transparency = 0;

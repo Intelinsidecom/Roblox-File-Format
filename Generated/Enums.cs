@@ -1799,8 +1799,7 @@ namespace RobloxFiles.Enums
     public enum DomainType
     {
         EXPERIENCE = 1,
-        GROUP,
-        OAUTH,
+        OAUTH = 3,
     }
 
     public enum DominantAxis
@@ -2076,6 +2075,12 @@ namespace RobloxFiles.Enums
     {
         ExperienceChat,
         Communication,
+    }
+
+    public enum FeedbackType
+    {
+        Feedback,
+        PlayerSupport,
     }
 
     public enum FieldOfViewMode
@@ -3732,6 +3737,7 @@ namespace RobloxFiles.Enums
         Avatar,
         DynamicHead,
         Shoes,
+        Makeup,
     }
 
     public enum OutputLayoutMode
