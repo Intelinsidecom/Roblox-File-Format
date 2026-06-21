@@ -17,7 +17,8 @@ namespace RobloxFiles.Tokens
         
         public bool ReadProperty(Property prop, XmlNode token)
         {
-            if (XmlPropertyTokens.ReadPropertyGeneric(token, out int value))
+            int value;
+            if (XmlPropertyTokens.ReadPropertyGeneric(token, out value))
             {
                 BrickColor brickColor = (BrickColorId)value;
                 prop.XmlToken = "BrickColor";

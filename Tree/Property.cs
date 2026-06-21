@@ -103,20 +103,23 @@ namespace RobloxFiles
 
         private void ImproviseRawBuffer()
         {
+            SharedString sharedString = RawValue as SharedString;
+            ProtectedString protectedString = RawValue as ProtectedString;
             if (RawValue is byte[])
             {
                 RawBuffer = RawValue as byte[];
                 return;
             }
-            else if (RawValue is SharedString sharedString)
-            {
+            
+            else if (sharedString != null)
+            { 
                 if (sharedString != null)
                 {
                     RawBuffer = sharedString.SharedValue;
                     return;
                 }
             }
-            else if (RawValue is ProtectedString protectedString)
+            else if (protectedString != null)
             {
                 if (protectedString != null)
                 {
@@ -206,7 +209,8 @@ namespace RobloxFiles
             {
                 if (Object != null)
                 {
-                    if (Name == "Tags" && Object is Instance inst)
+                    Instance inst = Object as Instance;
+                    if (Name == "Tags" && inst != null)
                     {
                         byte[] data = inst.SerializedTags;
                         RawValue = data;
@@ -234,7 +238,9 @@ namespace RobloxFiles
             {
                 if (Object != null)
                 {
-                    if (Name == "Tags" && value is byte[] data && Object is Instance inst)
+                    byte[] data = value as byte[];
+                    Instance inst = Object as Instance;
+                    if (Name == "Tags" && value is byte[] && Object is Instance)
                     {
                         inst.SerializedTags = data;
                     }
@@ -316,10 +322,11 @@ namespace RobloxFiles
 
         public string GetFullName()
         {
+            Instance inst = Object as Instance;
             string result = Name;
 
             if (Object != null)
-                if (Object is Instance inst)
+                if (Object is Instance)
                     result = inst.GetFullName() + "->" + result;
                 else
                     result = Object.ClassName + "->" + result;
@@ -341,11 +348,10 @@ namespace RobloxFiles
         public T CastValue<T>()
         {
             object result;
-
             if (typeof(T) == typeof(string))
                 result = Value?.ToString() ?? "";
-            else if (Value is T typedValue)
-                result = typedValue;
+            else if (Value is T)
+                result = (T)Value;
             else
                 result = default(T);
             

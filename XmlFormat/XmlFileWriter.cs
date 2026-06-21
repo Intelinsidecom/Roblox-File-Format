@@ -183,10 +183,13 @@ namespace RobloxFiles.XmlFormat
 
                 object a = DefaultProperty.Get(instance, prop);
                 object b = prop.Value;
-
-                if (a is double d0 && b is double d1)
+                double d0 = (double)a;
+                double d1 = (double)b;
+                float f0 = (float)a;
+                float f1 = (float)b;
+                if (a is double && b is double)
                     isDefault = d0.FuzzyEquals(d1);
-                else if (a is float f0 && b is float f1)
+                else if (a is float && b is float)
                     isDefault = f0.FuzzyEquals(f1);
                 else if (b != null)
                     isDefault = b.Equals(a);

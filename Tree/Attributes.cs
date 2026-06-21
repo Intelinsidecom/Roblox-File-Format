@@ -213,7 +213,8 @@ namespace RobloxFiles
         {
             Type type = value.GetType();
 
-            if (SupportedTypes.TryGetValue(type, out AttributeType dataType))
+            AttributeType dataType;
+            if (SupportedTypes.TryGetValue(type, out dataType))
             {
                 DataType = dataType;
                 Value = value;

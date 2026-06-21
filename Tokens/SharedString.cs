@@ -18,7 +18,8 @@ namespace RobloxFiles.Tokens
 
         public void WriteProperty(Property prop, XmlDocument doc, XmlNode node)
         {
-            if (prop.Value is SharedString value)
+            SharedString value = prop.Value as SharedString;
+            if (value != null)
             {
                 string key = value.Key;
 

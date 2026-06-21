@@ -47,7 +47,8 @@
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Ray other))
+            Ray other = obj as Ray;
+            if (!(other != null))
                 return false;
 
             if (!Origin.Equals(other.Origin))

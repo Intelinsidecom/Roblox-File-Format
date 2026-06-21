@@ -32,7 +32,8 @@
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Rect other))
+            Rect other = obj as Rect;
+            if (!(other != null))
                 return false;
 
             if (!Min.Equals(other.Min))

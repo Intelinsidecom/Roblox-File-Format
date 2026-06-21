@@ -13,7 +13,8 @@ namespace RobloxFiles.Tokens
         {
             string hex = token.InnerText;
 
-            if (Guid.TryParse(hex, out var guid))
+            Guid guid;
+            if (Guid.TryParse(hex, out guid))
             {
                 var bytes = new byte[16];
 

@@ -7,9 +7,12 @@ namespace RobloxFiles.Tokens
 {
     public class PhysicalPropertiesToken : IXmlPropertyToken
     {
-        public string XmlPropertyToken => "PhysicalProperties";
-
-        private static Func<string, T> CreateReader<T>(Func<string, T> parse, XmlNode token, T fallback = default) where T : struct
+        public string XmlPropertyToken
+        {
+            get { return "PhysicalProperties"; }
+        }
+        
+        private static Func<string, T> CreateReader<T>(Func<string, T> parse, XmlNode token, T fallback = default(T)) where T : struct
         {
             return new Func<string, T>(key =>
             {
@@ -57,17 +60,15 @@ namespace RobloxFiles.Tokens
         {
             bool hasCustomPhysics = (prop.Value != null);
             XmlElement customPhysics = doc.CreateElement("CustomPhysics");
-
-            customPhysics.InnerText = hasCustomPhysics
-                .ToString()
-                .ToLower();
+            
+            customPhysics.InnerText = hasCustomPhysics.ToString().ToLower();
 
             node.AppendChild(customPhysics);
 
             if (hasCustomPhysics)
             {
                 var customProps = prop.CastValue<PhysicalProperties>();
-                
+
                 var data = new Dictionary<string, float>()
                 {
                     { "Density", customProps.Density },

@@ -21,8 +21,9 @@ namespace RobloxFiles
 
         public override bool Equals(object obj)
         {
-            if (obj is AccessoryBlob blob)
+            if (obj is AccessoryBlob)
             {
+                AccessoryBlob blob = (AccessoryBlob)obj;
                 if (AssetId != blob.AssetId)
                     return false;
 

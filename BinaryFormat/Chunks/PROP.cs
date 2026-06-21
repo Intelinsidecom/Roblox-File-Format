@@ -777,8 +777,8 @@ namespace RobloxFiles.BinaryFormat.Chunks
             {
                 RbxObject obj = file.Objects[objId];
                 var objProps = obj.Properties;
-
-                if (!objProps.TryGetValue(Name, out Property prop))
+                Property prop;
+                if (!objProps.TryGetValue(Name, out prop))
                     throw new Exception($"Property {Name} must be defined in {obj}!");
                 else if (prop.Type != Type)
                     throw new Exception($"Property {Name} is not using the correct type in {obj}!");
@@ -1003,8 +1003,8 @@ namespace RobloxFiles.BinaryFormat.Chunks
                     props.ForEach(prop =>
                     {
                         CFrame value = null;
-
-                        if (prop.Value is Quaternion q)
+                        Quaternion q = prop.Value as Quaternion;
+                        if (q != null)
                             value = q.ToCFrame();
                         else
                             value = prop.CastValue<CFrame>();
@@ -1053,14 +1053,14 @@ namespace RobloxFiles.BinaryFormat.Chunks
 
                         props.ForEach(prop =>
                         {
-                            if (prop.Value is null)
+                            if (prop.Value == null)
                             {
                                 writer.Write(false);
                                 return;
                             }
-
-                            if (prop.Value is Optional<CFrame> optional)
+                            if (prop.Value is Optional<CFrame>)
                             {
+                                Optional<CFrame> optional = (Optional<CFrame>)prop.Value;
                                 writer.Write(optional.HasValue);
                                 return;
                             }
@@ -1078,8 +1078,9 @@ namespace RobloxFiles.BinaryFormat.Chunks
 
                     props.ForEach(prop =>
                     {
-                        if (prop.Value is uint raw)
+                        if (prop.Value is uint)
                         {
+                            uint raw = (uint)prop.Value;
                             enums.Add(raw);
                             return;
                         }
@@ -1440,8 +1441,8 @@ namespace RobloxFiles.BinaryFormat.Chunks
 
                 object value = prop?.Value;
                 string str = value?.ToInvariantString() ?? "null";
-
-                if (value is byte[] buffer)
+                byte[] buffer = value as byte[];
+                if (buffer != null)
                     str = Convert.ToBase64String(buffer);
 
                 if (str.Length > 25)

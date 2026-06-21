@@ -71,7 +71,7 @@ namespace RobloxFiles.XmlFormat
             }
             catch (NotSupportedException)
             {
-                outValue = default;
+                outValue = default(T);
                 return false;
             }
         }
@@ -83,8 +83,8 @@ namespace RobloxFiles.XmlFormat
                 var name = nameof(prop);
                 throw new ArgumentNullException(name);
             }
-
-            if (ReadPropertyGeneric(token, out T result))
+            T result;
+            if (ReadPropertyGeneric(token, out result))
             {
                 prop.Type = propType;
                 prop.Value = result;

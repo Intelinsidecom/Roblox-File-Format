@@ -23,8 +23,9 @@ namespace RobloxFiles.Tokens
 
         public void WriteProperty(Property prop, XmlDocument doc, XmlNode node)
         {
-            if (prop.Value is Optional<CFrame> optional)
+            if (prop.Value is Optional<CFrame>)
             {
+                Optional<CFrame> optional = (Optional<CFrame>)prop.Value;
                 if (optional.HasValue)
                 {
                     CFrame value = optional.Value;

@@ -387,15 +387,15 @@ namespace RobloxFiles
     {
         public ContentId Asset
         {
-            get => AudioContent;
-            set => AudioContent = value;
+            get { return AudioContent; }
+            set { AudioContent = value; }
         }
 
         [Obsolete]
         public string AssetId
         {
-            get => Asset;
-            set => Asset = value;
+            get { return Asset; }
+            set { Asset = value; }
         }
 
         public Content AudioContent = Content.None;
@@ -440,8 +440,8 @@ namespace RobloxFiles
         [Obsolete]
         public AudioSubType AudioSubtype
         {
-            get => AudioSubType;
-            set => AudioSubType = value;
+            get { return AudioSubType; }
+            set { AudioSubType = value; }
         }
 
         public int MaxDuration = int.MaxValue;
@@ -721,8 +721,8 @@ namespace RobloxFiles
 
         public ContentId CageMeshId
         {
-            get => CageMeshContent;
-            set => CageMeshContent = value;
+            get { return CageMeshContent; }
+            set { CageMeshContent = value; }
         }
 
         public CFrame CageOrigin = CFrame.identity;
@@ -748,8 +748,8 @@ namespace RobloxFiles
 
         public ContentId ReferenceMeshId
         {
-            get => ReferenceMeshContent;
-            set => ReferenceMeshContent = value;
+            get { return ReferenceMeshContent; }
+            set { ReferenceMeshContent = value; }
         }
 
         public CFrame ReferenceOrigin = CFrame.identity;
@@ -806,15 +806,15 @@ namespace RobloxFiles
         [Obsolete]
         public Vector3 angularvelocity
         {
-            get => AngularVelocity;
-            set => AngularVelocity = value;
+            get { return AngularVelocity; }
+            set { AngularVelocity = value; }
         }
 
         [Obsolete]
         public Vector3 maxTorque
         {
-            get => MaxTorque;
-            set => MaxTorque = value;
+            get { return MaxTorque; }
+            set { MaxTorque = value; }
         }
     }
 
@@ -825,8 +825,8 @@ namespace RobloxFiles
         [Obsolete]
         public Vector3 force
         {
-            get => Force;
-            set => Force = value;
+            get { return Force; }
+            set { Force = value; }
         }
     }
 
@@ -840,15 +840,15 @@ namespace RobloxFiles
         [Obsolete]
         public CFrame cframe
         {
-            get => CFrame;
-            set => CFrame = value;
+            get { return CFrame; }
+            set { CFrame = value; }
         }
 
         [Obsolete]
         public Vector3 maxTorque
         {
-            get => MaxTorque;
-            set => MaxTorque = value;
+            get { return MaxTorque; }
+            set { MaxTorque = value; }
         }
     }
 
@@ -862,15 +862,15 @@ namespace RobloxFiles
         [Obsolete]
         public Vector3 maxForce
         {
-            get => MaxForce;
-            set => MaxForce = value;
+            get { return MaxForce; }
+            set { MaxForce = value; }
         }
 
         [Obsolete]
         public Vector3 position
         {
-            get => Position;
-            set => Position = value;
+            get { return Position; }
+            set { Position = value; }
         }
     }
 
@@ -882,15 +882,15 @@ namespace RobloxFiles
         [Obsolete]
         public Vector3 force
         {
-            get => Force;
-            set => Force = value;
+            get { return Force; }
+            set { Force = value; }
         }
 
         [Obsolete]
         public Vector3 location
         {
-            get => Location;
-            set => Location = value;
+            get { return Location; }
+            set { Location = value; }
         }
     }
 
@@ -903,15 +903,15 @@ namespace RobloxFiles
         [Obsolete]
         public Vector3 maxForce
         {
-            get => MaxForce;
-            set => MaxForce = value;
+            get { return MaxForce; }
+            set { MaxForce = value; }
         }
 
         [Obsolete]
         public Vector3 velocity
         {
-            get => Velocity;
-            set => Velocity = value;
+            get { return Velocity; }
+            set { Velocity = value; }
         }
     }
 
@@ -1011,48 +1011,48 @@ namespace RobloxFiles
     {
         public BrickColor HeadColor
         {
-            get => BrickColor.FromColor3(HeadColor3);
-            set => HeadColor3 = value?.Color;
+            get { return BrickColor.FromColor3(HeadColor3); }
+            set { HeadColor3 = value?.Color; }
         }
 
         public Color3 HeadColor3 = Color3.FromRGB(253, 234, 141);
 
         public BrickColor LeftArmColor
         {
-            get => BrickColor.FromColor3(LeftArmColor3);
-            set => LeftArmColor3 = value?.Color;
+            get { return BrickColor.FromColor3(LeftArmColor3); }
+            set { LeftArmColor3 = value?.Color; }
         }
 
         public Color3 LeftArmColor3 = Color3.FromRGB(253, 234, 141);
 
         public BrickColor LeftLegColor
         {
-            get => BrickColor.FromColor3(LeftLegColor3);
-            set => LeftLegColor3 = value?.Color;
+            get { return BrickColor.FromColor3(LeftLegColor3); }
+            set { LeftLegColor3 = value?.Color; }
         }
 
         public Color3 LeftLegColor3 = Color3.FromRGB(13, 105, 172);
 
         public BrickColor RightArmColor
         {
-            get => BrickColor.FromColor3(RightArmColor3);
-            set => RightArmColor3 = value?.Color;
+            get { return BrickColor.FromColor3(RightArmColor3); }
+            set { RightArmColor3 = value?.Color; }
         }
 
         public Color3 RightArmColor3 = Color3.FromRGB(253, 234, 141);
 
         public BrickColor RightLegColor
         {
-            get => BrickColor.FromColor3(RightLegColor3);
-            set => RightLegColor3 = value?.Color;
+            get { return BrickColor.FromColor3(RightLegColor3); }
+            set { RightLegColor3 = value?.Color; }
         }
 
         public Color3 RightLegColor3 = Color3.FromRGB(13, 105, 172);
 
         public BrickColor TorsoColor
         {
-            get => BrickColor.FromColor3(TorsoColor3);
-            set => TorsoColor3 = value?.Color;
+            get { return BrickColor.FromColor3(TorsoColor3); }
+            set { TorsoColor3 = value?.Color; }
         }
 
         public Color3 TorsoColor3 = Color3.FromRGB(40, 127, 71);
@@ -1107,8 +1107,8 @@ namespace RobloxFiles
     {
         public ContentId CursorIcon
         {
-            get => CursorIconContent;
-            set => CursorIconContent = value;
+            get { return CursorIconContent; }
+            set { CursorIconContent = value; }
         }
 
         public Content CursorIconContent = Content.None;
@@ -1119,8 +1119,8 @@ namespace RobloxFiles
     {
         public ContentId ActivatedCursorIcon
         {
-            get => ActivatedCursorIconContent;
-            set => ActivatedCursorIconContent = value;
+            get { return ActivatedCursorIconContent; }
+            set { ActivatedCursorIconContent = value; }
         }
 
         public Content ActivatedCursorIconContent = Content.None;
@@ -1975,16 +1975,16 @@ namespace RobloxFiles
 
         public ContentId MetalnessMap
         {
-            get => MetalnessMapContent;
-            set => MetalnessMapContent = value;
+            get { return MetalnessMapContent; }
+            set { MetalnessMapContent = value; }
         }
 
         public Content MetalnessMapContent = Content.None;
 
         public ContentId NormalMap
         {
-            get => NormalMapContent;
-            set => NormalMapContent = value;
+            get { return NormalMapContent; }
+            set { NormalMapContent = value; }
         }
 
         public Content NormalMapContent = Content.None;
@@ -1992,8 +1992,8 @@ namespace RobloxFiles
 
         public ContentId RoughnessMap
         {
-            get => RoughnessMapContent;
-            set => RoughnessMapContent = value;
+            get { return RoughnessMapContent; }
+            set { RoughnessMapContent = value; }
         }
 
         public Content RoughnessMapContent = Content.None;
@@ -2006,8 +2006,8 @@ namespace RobloxFiles
 
         public ContentId Texture
         {
-            get => TextureContent;
-            set => TextureContent = value;
+            get { return TextureContent; }
+            set { TextureContent = value; }
         }
 
         public Content TextureContent = Content.None;
@@ -2081,16 +2081,16 @@ namespace RobloxFiles
 
         public float Heat
         {
-            get => heat_xml;
-            set => heat_xml = value;
+            get { return heat_xml; }
+            set { heat_xml = value; }
         }
 
         public Color3 SecondaryColor = Color3.FromRGB(139, 80, 55);
 
         public float Size
         {
-            get => size_xml;
-            set => size_xml = value;
+            get { return size_xml; }
+            set { size_xml = value; }
         }
 
         public float TimeScale = 1;
@@ -2099,8 +2099,8 @@ namespace RobloxFiles
         [Obsolete]
         public float size
         {
-            get => Size;
-            set => Size = value;
+            get { return Size; }
+            set { Size = value; }
         }
 
         public float size_xml = 5;
@@ -2223,8 +2223,8 @@ namespace RobloxFiles
         [Obsolete]
         public bool Localize
         {
-            get => AutoLocalize;
-            set => AutoLocalize = value;
+            get { return AutoLocalize; }
+            set { AutoLocalize = value; }
         }
 
         public LocalizationTable RootLocalizationTable = null;
@@ -2244,8 +2244,8 @@ namespace RobloxFiles
         [Obsolete]
         public BrickColor BackgroundColor
         {
-            get => BrickColor.FromColor3(BackgroundColor3);
-            set => BackgroundColor3 = value?.Color;
+            get { return BrickColor.FromColor3(BackgroundColor3); }
+            set { BackgroundColor3 = value?.Color; }
         }
 
         public Color3 BackgroundColor3 = Color3.FromRGB(163, 162, 165);
@@ -2254,8 +2254,8 @@ namespace RobloxFiles
         [Obsolete]
         public BrickColor BorderColor
         {
-            get => BrickColor.FromColor3(BorderColor3);
-            set => BorderColor3 = value?.Color;
+            get { return BrickColor.FromColor3(BorderColor3); }
+            set { BorderColor3 = value?.Color; }
         }
 
         public Color3 BorderColor3 = Color3.FromRGB(27, 42, 53);
@@ -2283,8 +2283,8 @@ namespace RobloxFiles
 
         public float Transparency
         {
-            get => BackgroundTransparency;
-            set => BackgroundTransparency = value;
+            get { return BackgroundTransparency; }
+            set { BackgroundTransparency = value; }
         }
 
         public bool Visible = true;
@@ -2335,16 +2335,16 @@ namespace RobloxFiles
 
         public ContentId HoverImage
         {
-            get => HoverImageContent;
-            set => HoverImageContent = value;
+            get { return HoverImageContent; }
+            set { HoverImageContent = value; }
         }
 
         public Content HoverImageContent = Content.None;
 
         public ContentId Image
         {
-            get => ImageContent;
-            set => ImageContent = value;
+            get { return ImageContent; }
+            set { ImageContent = value; }
         }
 
         public Color3 ImageColor3 = new Color3(1, 1, 1);
@@ -2355,8 +2355,8 @@ namespace RobloxFiles
 
         public ContentId PressedImage
         {
-            get => PressedImageContent;
-            set => PressedImageContent = value;
+            get { return PressedImageContent; }
+            set { PressedImageContent = value; }
         }
 
         public Content PressedImageContent = Content.None;
@@ -2378,8 +2378,8 @@ namespace RobloxFiles
 
         public Font Font
         {
-            get => FontUtility.GetLegacyFont(FontFace);
-            set => FontUtility.TryGetFontFace(value, out FontFace);
+            get { return FontUtility.GetLegacyFont(FontFace); }
+            set { FontUtility.TryGetFontFace(value, out FontFace); }
         }
 
         public FontFace FontFace = FontFace.FromEnum(Enums.Font.Legacy);
@@ -2387,8 +2387,8 @@ namespace RobloxFiles
         [Obsolete]
         public FontSize FontSize
         {
-            get => FontUtility.GetFontSize(TextSize);
-            set => TextSize = FontUtility.GetFontSize(value);
+            get { return FontUtility.GetFontSize(TextSize); }
+            set { TextSize = FontUtility.GetFontSize(value); }
         }
 
         public float LineHeight = 1;
@@ -2402,8 +2402,8 @@ namespace RobloxFiles
         [Obsolete]
         public BrickColor TextColor
         {
-            get => BrickColor.FromColor3(TextColor3);
-            set => TextColor3 = value?.Color;
+            get { return BrickColor.FromColor3(TextColor3); }
+            set { TextColor3 = value?.Color; }
         }
 
         public Color3 TextColor3 = Color3.FromRGB(27, 42, 53);
@@ -2418,8 +2418,8 @@ namespace RobloxFiles
         [Obsolete]
         public bool TextWrap
         {
-            get => TextWrapped;
-            set => TextWrapped = value;
+            get { return TextWrapped; }
+            set { TextWrapped = value; }
         }
 
         public bool TextWrapped;
@@ -2444,8 +2444,8 @@ namespace RobloxFiles
 
         public ContentId Image
         {
-            get => ImageContent;
-            set => ImageContent = value;
+            get { return ImageContent; }
+            set { ImageContent = value; }
         }
 
         public Color3 ImageColor3 = new Color3(1, 1, 1);
@@ -2469,8 +2469,8 @@ namespace RobloxFiles
 
         public Font Font
         {
-            get => FontUtility.GetLegacyFont(FontFace);
-            set => FontUtility.TryGetFontFace(value, out FontFace);
+            get { return FontUtility.GetLegacyFont(FontFace); }
+            set { FontUtility.TryGetFontFace(value, out FontFace); }
         }
 
         public FontFace FontFace = FontFace.FromEnum(Enums.Font.Legacy);
@@ -2478,8 +2478,8 @@ namespace RobloxFiles
         [Obsolete]
         public FontSize FontSize
         {
-            get => FontUtility.GetFontSize(TextSize);
-            set => TextSize = FontUtility.GetFontSize(value);
+            get { return FontUtility.GetFontSize(TextSize); }
+            set { TextSize = FontUtility.GetFontSize(value); }
         }
 
         public float LineHeight = 1;
@@ -2493,8 +2493,8 @@ namespace RobloxFiles
         [Obsolete]
         public BrickColor TextColor
         {
-            get => BrickColor.FromColor3(TextColor3);
-            set => TextColor3 = value?.Color;
+            get { return BrickColor.FromColor3(TextColor3); }
+            set { TextColor3 = value?.Color; }
         }
 
         public Color3 TextColor3 = Color3.FromRGB(27, 42, 53);
@@ -2509,8 +2509,8 @@ namespace RobloxFiles
         [Obsolete]
         public bool TextWrap
         {
-            get => TextWrapped;
-            set => TextWrapped = value;
+            get { return TextWrapped; }
+            set { TextWrapped = value; }
         }
 
         public bool TextWrapped;
@@ -2534,8 +2534,8 @@ namespace RobloxFiles
 
         public ContentId BottomImage
         {
-            get => BottomImageContent;
-            set => BottomImageContent = value;
+            get { return BottomImageContent; }
+            set { BottomImageContent = value; }
         }
 
         public Content BottomImageContent = new Content("rbxasset://textures/ui/Scroll/scroll-bottom.png");
@@ -2546,8 +2546,8 @@ namespace RobloxFiles
 
         public ContentId MidImage
         {
-            get => MidImageContent;
-            set => MidImageContent = value;
+            get { return MidImageContent; }
+            set { MidImageContent = value; }
         }
 
         public Content MidImageContent = new Content("rbxasset://textures/ui/Scroll/scroll-middle.png");
@@ -2559,8 +2559,8 @@ namespace RobloxFiles
 
         public ContentId TopImage
         {
-            get => TopImageContent;
-            set => TopImageContent = value;
+            get { return TopImageContent; }
+            set { TopImageContent = value; }
         }
 
         public Content TopImageContent = new Content("rbxasset://textures/ui/Scroll/scroll-top.png");
@@ -2581,8 +2581,8 @@ namespace RobloxFiles
 
         public Font Font
         {
-            get => FontUtility.GetLegacyFont(FontFace);
-            set => FontUtility.TryGetFontFace(value, out FontFace);
+            get { return FontUtility.GetLegacyFont(FontFace); }
+            set { FontUtility.TryGetFontFace(value, out FontFace); }
         }
 
         public FontFace FontFace = FontFace.FromEnum(Enums.Font.Legacy);
@@ -2590,8 +2590,8 @@ namespace RobloxFiles
         [Obsolete]
         public FontSize FontSize
         {
-            get => FontUtility.GetFontSize(TextSize);
-            set => TextSize = FontUtility.GetFontSize(value);
+            get { return FontUtility.GetFontSize(TextSize); }
+            set { TextSize = FontUtility.GetFontSize(value); }
         }
 
         public float LineHeight = 1;
@@ -2609,8 +2609,8 @@ namespace RobloxFiles
         [Obsolete]
         public BrickColor TextColor
         {
-            get => BrickColor.FromColor3(TextColor3);
-            set => TextColor3 = value?.Color;
+            get { return BrickColor.FromColor3(TextColor3); }
+            set { TextColor3 = value?.Color; }
         }
 
         public Color3 TextColor3 = Color3.FromRGB(27, 42, 53);
@@ -2626,8 +2626,8 @@ namespace RobloxFiles
         [Obsolete]
         public bool TextWrap
         {
-            get => TextWrapped;
-            set => TextWrapped = value;
+            get { return TextWrapped; }
+            set { TextWrapped = value; }
         }
 
         public bool TextWrapped;
@@ -2668,8 +2668,8 @@ namespace RobloxFiles
 
         public ContentId Video
         {
-            get => VideoContent;
-            set => VideoContent = value;
+            get { return VideoContent; }
+            set { VideoContent = value; }
         }
 
         public Content VideoContent = Content.None;
@@ -2770,8 +2770,8 @@ namespace RobloxFiles
         [Obsolete]
         public BrickColor Color
         {
-            get => BrickColor.FromColor3(Color3);
-            set => Color3 = value?.Color;
+            get { return BrickColor.FromColor3(Color3); }
+            set { Color3 = value?.Color; }
         }
 
         public Color3 Color3 = Color3.FromRGB(13, 105, 172);
@@ -2804,8 +2804,8 @@ namespace RobloxFiles
         [Obsolete]
         public BrickColor SurfaceColor
         {
-            get => BrickColor.FromColor3(SurfaceColor3);
-            set => SurfaceColor3 = value?.Color;
+            get { return BrickColor.FromColor3(SurfaceColor3); }
+            set { SurfaceColor3 = value?.Color; }
         }
 
         public Color3 SurfaceColor3 = Color3.FromRGB(13, 105, 172);
@@ -2896,8 +2896,8 @@ namespace RobloxFiles
         [Obsolete]
         public BrickColor SurfaceColor
         {
-            get => BrickColor.FromColor3(SurfaceColor3);
-            set => SurfaceColor3 = value?.Color;
+            get { return BrickColor.FromColor3(SurfaceColor3); }
+            set { SurfaceColor3 = value?.Color; }
         }
 
         public Color3 SurfaceColor3 = Color3.FromRGB(13, 105, 172);
@@ -3057,8 +3057,8 @@ namespace RobloxFiles
 
         public float Health
         {
-            get => Health_XML;
-            set => Health_XML = value;
+            get { return Health_XML; }
+            set { Health_XML = value; }
         }
 
         public float HealthDisplayDistance = 100;
@@ -3092,8 +3092,8 @@ namespace RobloxFiles
         [Obsolete]
         public float maxHealth
         {
-            get => MaxHealth;
-            set => MaxHealth = value;
+            get { return MaxHealth; }
+            set { MaxHealth = value; }
         }
     }
 
@@ -3110,14 +3110,14 @@ namespace RobloxFiles
 
         public long Head
         {
-            get => Specials.GetBodyPart(this, BodyPart.Head).AssetId;
-            set => Specials.GetBodyPart(this, BodyPart.Head).AssetId = value;
+            get { return Specials.GetBodyPart(this, BodyPart.Head).AssetId; }
+            set { Specials.GetBodyPart(this, BodyPart.Head).AssetId = value; }
         }
 
         public Color3 HeadColor
         {
-            get => Specials.GetBodyPart(this, BodyPart.Head).Color;
-            set => Specials.GetBodyPart(this, BodyPart.Head).Color = value;
+            get { return Specials.GetBodyPart(this, BodyPart.Head).Color; }
+            set { Specials.GetBodyPart(this, BodyPart.Head).Color = value; }
         }
 
         public float HeadScale = 1;
@@ -3127,26 +3127,26 @@ namespace RobloxFiles
 
         public long LeftArm
         {
-            get => Specials.GetBodyPart(this, BodyPart.LeftArm).AssetId;
-            set => Specials.GetBodyPart(this, BodyPart.LeftArm).AssetId = value;
+            get { return Specials.GetBodyPart(this, BodyPart.LeftArm).AssetId; }
+            set { Specials.GetBodyPart(this, BodyPart.LeftArm).AssetId = value; }
         }
 
         public Color3 LeftArmColor
         {
-            get => Specials.GetBodyPart(this, BodyPart.LeftArm).Color;
-            set => Specials.GetBodyPart(this, BodyPart.LeftArm).Color = value;
+            get { return Specials.GetBodyPart(this, BodyPart.LeftArm).Color; }
+            set { Specials.GetBodyPart(this, BodyPart.LeftArm).Color = value; }
         }
 
         public long LeftLeg
         {
-            get => Specials.GetBodyPart(this, BodyPart.LeftLeg).AssetId;
-            set => Specials.GetBodyPart(this, BodyPart.LeftLeg).AssetId = value;
+            get { return Specials.GetBodyPart(this, BodyPart.LeftLeg).AssetId; }
+            set { Specials.GetBodyPart(this, BodyPart.LeftLeg).AssetId = value; }
         }
 
         public Color3 LeftLegColor
         {
-            get => Specials.GetBodyPart(this, BodyPart.LeftLeg).Color;
-            set => Specials.GetBodyPart(this, BodyPart.LeftLeg).Color = value;
+            get { return Specials.GetBodyPart(this, BodyPart.LeftLeg).Color; }
+            set { Specials.GetBodyPart(this, BodyPart.LeftLeg).Color = value; }
         }
 
         public long MoodAnimation = 0;
@@ -3155,26 +3155,26 @@ namespace RobloxFiles
 
         public long RightArm
         {
-            get => Specials.GetBodyPart(this, BodyPart.RightArm).AssetId;
-            set => Specials.GetBodyPart(this, BodyPart.RightArm).AssetId = value;
+            get { return Specials.GetBodyPart(this, BodyPart.RightArm).AssetId; }
+            set { Specials.GetBodyPart(this, BodyPart.RightArm).AssetId = value; }
         }
 
         public Color3 RightArmColor
         {
-            get => Specials.GetBodyPart(this, BodyPart.RightArm).Color;
-            set => Specials.GetBodyPart(this, BodyPart.RightArm).Color = value;
+            get { return Specials.GetBodyPart(this, BodyPart.RightArm).Color; }
+            set { Specials.GetBodyPart(this, BodyPart.RightArm).Color = value; }
         }
 
         public long RightLeg
         {
-            get => Specials.GetBodyPart(this, BodyPart.RightLeg).AssetId;
-            set => Specials.GetBodyPart(this, BodyPart.RightLeg).AssetId = value;
+            get { return Specials.GetBodyPart(this, BodyPart.RightLeg).AssetId; }
+            set { Specials.GetBodyPart(this, BodyPart.RightLeg).AssetId = value; }
         }
 
         public Color3 RightLegColor
         {
-            get => Specials.GetBodyPart(this, BodyPart.RightLeg).Color;
-            set => Specials.GetBodyPart(this, BodyPart.RightLeg).Color = value;
+            get { return Specials.GetBodyPart(this, BodyPart.RightLeg).Color; }
+            set { Specials.GetBodyPart(this, BodyPart.RightLeg).Color = value; }
         }
 
         public long RunAnimation = 0;
@@ -3184,14 +3184,14 @@ namespace RobloxFiles
 
         public long Torso
         {
-            get => Specials.GetBodyPart(this, BodyPart.Torso).AssetId;
-            set => Specials.GetBodyPart(this, BodyPart.Torso).AssetId = value;
+            get { return Specials.GetBodyPart(this, BodyPart.Torso).AssetId; }
+            set { Specials.GetBodyPart(this, BodyPart.Torso).AssetId = value; }
         }
 
         public Color3 TorsoColor
         {
-            get => Specials.GetBodyPart(this, BodyPart.Torso).Color;
-            set => Specials.GetBodyPart(this, BodyPart.Torso).Color = value;
+            get { return Specials.GetBodyPart(this, BodyPart.Torso).Color; }
+            set { Specials.GetBodyPart(this, BodyPart.Torso).Color = value; }
         }
 
         public bool UseAvatarSettings;
@@ -3643,8 +3643,8 @@ namespace RobloxFiles
         [Obsolete]
         public string DevelopmentLanguage
         {
-            get => SourceLocaleId;
-            set => SourceLocaleId = value;
+            get { return SourceLocaleId; }
+            set { SourceLocaleId = value; }
         }
 
         public string SourceLocaleId = "en-us";
@@ -3818,8 +3818,8 @@ namespace RobloxFiles
 
         public ContentId ColorMap
         {
-            get => ColorMapContent;
-            set => ColorMapContent = value;
+            get { return ColorMapContent; }
+            set { ColorMapContent = value; }
         }
 
         public Content ColorMapContent = Content.None;
@@ -3831,24 +3831,24 @@ namespace RobloxFiles
 
         public ContentId MetalnessMap
         {
-            get => MetalnessMapContent;
-            set => MetalnessMapContent = value;
+            get { return MetalnessMapContent; }
+            set { MetalnessMapContent = value; }
         }
 
         public Content MetalnessMapContent = Content.None;
 
         public ContentId NormalMap
         {
-            get => NormalMapContent;
-            set => NormalMapContent = value;
+            get { return NormalMapContent; }
+            set { NormalMapContent = value; }
         }
 
         public Content NormalMapContent = Content.None;
 
         public ContentId RoughnessMap
         {
-            get => RoughnessMapContent;
-            set => RoughnessMapContent = value;
+            get { return RoughnessMapContent; }
+            set { RoughnessMapContent = value; }
         }
 
         public Content RoughnessMapContent = Content.None;
@@ -4021,8 +4021,8 @@ namespace RobloxFiles
 
         public BrickColor BrickColor
         {
-            get => BrickColor.FromColor3(Color);
-            set => Color = value?.Color;
+            get { return BrickColor.FromColor3(Color); }
+            set { Color = value?.Color; }
         }
 
         public CFrame CFrame = CFrame.identity;
@@ -4037,8 +4037,8 @@ namespace RobloxFiles
 
         public Color3 Color
         {
-            get => Color3uint8;
-            set => Color3uint8 = value;
+            get { return Color3uint8; }
+            set { Color3uint8 = value; }
         }
 
         public Color3uint8 Color3uint8 = Color3.FromRGB(163, 162, 165);
@@ -4099,8 +4099,8 @@ namespace RobloxFiles
 
         public Vector3 Size
         {
-            get => size;
-            set => size = value;
+            get { return size; }
+            set { size = value; }
         }
 
         [Obsolete]
@@ -4122,8 +4122,8 @@ namespace RobloxFiles
         [Obsolete]
         public BrickColor brickColor
         {
-            get => BrickColor;
-            set => BrickColor = value;
+            get { return BrickColor; }
+            set { BrickColor = value; }
         }
 
         public Vector3 size = new Vector3(4, 1.2f, 2);
@@ -4146,15 +4146,15 @@ namespace RobloxFiles
         [Obsolete]
         public FormFactor FormFactor
         {
-            get => formFactorRaw;
-            set => formFactorRaw = value;
+            get { return formFactorRaw; }
+            set { formFactorRaw = value; }
         }
 
         [Obsolete]
         public FormFactor formFactor
         {
-            get => FormFactor;
-            set => FormFactor = value;
+            get { return FormFactor; }
+            set { FormFactor = value; }
         }
 
         public FormFactor formFactorRaw = FormFactor.Brick;
@@ -4172,8 +4172,8 @@ namespace RobloxFiles
 
         public PartType Shape
         {
-            get => shape;
-            set => shape = value;
+            get { return shape; }
+            set { shape = value; }
         }
 
         public PartType shape = PartType.Block;
@@ -4306,14 +4306,14 @@ namespace RobloxFiles
         [Obsolete]
         public ContentId MeshID
         {
-            get => MeshContent;
-            set => MeshContent = value;
+            get { return MeshContent; }
+            set { MeshContent = value; }
         }
 
         public ContentId MeshId
         {
-            get => MeshContent;
-            set => MeshContent = value;
+            get { return MeshContent; }
+            set { MeshContent = value; }
         }
 
         public byte[] PhysicsData;
@@ -4322,8 +4322,8 @@ namespace RobloxFiles
 
         public ContentId TextureID
         {
-            get => TextureContent;
-            set => TextureContent = value;
+            get { return TextureContent; }
+            set { TextureContent = value; }
         }
 
         public int VertexCount = 0;
@@ -4409,8 +4409,8 @@ namespace RobloxFiles
 
         public Style Style
         {
-            get => style;
-            set => style = value;
+            get { return style; }
+            set { style = value; }
         }
 
         public Style style = Style.AlternatingSupports;
@@ -4446,8 +4446,8 @@ namespace RobloxFiles
         [Obsolete]
         public CFrame CoordinateFrame
         {
-            get => CFrame;
-            set => CFrame = value;
+            get { return CFrame; }
+            set { CFrame = value; }
         }
 
         public float FieldOfView = 70;
@@ -4460,8 +4460,8 @@ namespace RobloxFiles
         [Obsolete]
         public CFrame focus
         {
-            get => Focus;
-            set => Focus = value;
+            get { return Focus; }
+            set { Focus = value; }
         }
     }
 
@@ -4489,8 +4489,8 @@ namespace RobloxFiles
 
         public ContentId TextureId
         {
-            get => TextureContent;
-            set => TextureContent = value;
+            get { return TextureContent; }
+            set { TextureContent = value; }
         }
     }
 
@@ -4657,8 +4657,8 @@ namespace RobloxFiles
         [Obsolete]
         public float VelocitySpread
         {
-            get => SpreadAngle.X;
-            set => SpreadAngle = new Vector2(value, value);
+            get { return SpreadAngle.X; }
+            set { SpreadAngle = new Vector2(value, value); }
         }
 
         public bool WindAffectsDrag;
@@ -5375,22 +5375,22 @@ namespace RobloxFiles
 
         public ContentId MoonTextureId
         {
-            get => MoonTextureContent;
-            set => MoonTextureContent = value;
+            get { return MoonTextureContent; }
+            set { MoonTextureContent = value; }
         }
 
         public Content SkyboxBackContent = new Content("rbxasset://textures/sky/sky512_bk.tex");
 
         public ContentId SkyboxBk
         {
-            get => SkyboxBackContent;
-            set => SkyboxBackContent = value;
+            get { return SkyboxBackContent; }
+            set { SkyboxBackContent = value; }
         }
 
         public ContentId SkyboxDn
         {
-            get => SkyboxDownContent;
-            set => SkyboxDownContent = value;
+            get { return SkyboxDownContent; }
+            set { SkyboxDownContent = value; }
         }
 
         public Content SkyboxDownContent = new Content("rbxasset://textures/sky/sky512_dn.tex");
@@ -5398,16 +5398,16 @@ namespace RobloxFiles
 
         public ContentId SkyboxFt
         {
-            get => SkyboxFrontContent;
-            set => SkyboxFrontContent = value;
+            get { return SkyboxFrontContent; }
+            set { SkyboxFrontContent = value; }
         }
 
         public Content SkyboxLeftContent = new Content("rbxasset://textures/sky/sky512_lf.tex");
 
         public ContentId SkyboxLf
         {
-            get => SkyboxLeftContent;
-            set => SkyboxLeftContent = value;
+            get { return SkyboxLeftContent; }
+            set { SkyboxLeftContent = value; }
         }
 
         public Vector3 SkyboxOrientation = Vector3.zero;
@@ -5415,14 +5415,14 @@ namespace RobloxFiles
 
         public ContentId SkyboxRt
         {
-            get => SkyboxRightContent;
-            set => SkyboxRightContent = value;
+            get { return SkyboxRightContent; }
+            set { SkyboxRightContent = value; }
         }
 
         public ContentId SkyboxUp
         {
-            get => SkyboxUpContent;
-            set => SkyboxUpContent = value;
+            get { return SkyboxUpContent; }
+            set { SkyboxUpContent = value; }
         }
 
         public Content SkyboxUpContent = new Content("rbxasset://textures/sky/sky512_up.tex");
@@ -5432,8 +5432,8 @@ namespace RobloxFiles
 
         public ContentId SunTextureId
         {
-            get => SunTextureContent;
-            set => SunTextureContent = value;
+            get { return SunTextureContent; }
+            set { SunTextureContent = value; }
         }
     }
 
@@ -5459,20 +5459,20 @@ namespace RobloxFiles
 
         public float Opacity
         {
-            get => opacity_xml;
-            set => opacity_xml = value;
+            get { return opacity_xml; }
+            set { opacity_xml = value; }
         }
 
         public float RiseVelocity
         {
-            get => riseVelocity_xml;
-            set => riseVelocity_xml = value;
+            get { return riseVelocity_xml; }
+            set { riseVelocity_xml = value; }
         }
 
         public float Size
         {
-            get => size_xml;
-            set => size_xml = value;
+            get { return size_xml; }
+            set { size_xml = value; }
         }
 
         public float TimeScale = 1;
@@ -5510,15 +5510,15 @@ namespace RobloxFiles
         [Obsolete]
         public float MinDistance
         {
-            get => RollOffMinDistance;
-            set => RollOffMinDistance = value;
+            get { return RollOffMinDistance; }
+            set { RollOffMinDistance = value; }
         }
 
         [Obsolete]
         public float Pitch
         {
-            get => PlaybackSpeed;
-            set => PlaybackSpeed = value;
+            get { return PlaybackSpeed; }
+            set { PlaybackSpeed = value; }
         }
 
         public bool PlayOnRemove;
@@ -5533,8 +5533,8 @@ namespace RobloxFiles
 
         public ContentId SoundId
         {
-            get => AudioContent;
-            set => AudioContent = value;
+            get { return AudioContent; }
+            set { AudioContent = value; }
         }
 
         public double TimePosition = 0;
@@ -5543,15 +5543,15 @@ namespace RobloxFiles
         [Obsolete]
         public float xmlRead_MaxDistance_3
         {
-            get => RollOffMaxDistance;
-            set => RollOffMaxDistance = value;
+            get { return RollOffMaxDistance; }
+            set { RollOffMaxDistance = value; }
         }
 
         [Obsolete]
         public float xmlRead_MinDistance_3
         {
-            get => RollOffMinDistance;
-            set => RollOffMinDistance = value;
+            get { return RollOffMinDistance; }
+            set { RollOffMinDistance = value; }
         }
     }
 
@@ -5665,8 +5665,8 @@ namespace RobloxFiles
     {
         public Color3 Color
         {
-            get => SparkleColor;
-            set => SparkleColor = value;
+            get { return SparkleColor; }
+            set { SparkleColor = value; }
         }
 
         public bool Enabled = true;
@@ -5898,8 +5898,8 @@ namespace RobloxFiles
 
         public ContentId ColorMap
         {
-            get => ColorMapContent;
-            set => ColorMapContent = value;
+            get { return ColorMapContent; }
+            set { ColorMapContent = value; }
         }
 
         public Content ColorMapContent = Content.None;
@@ -5909,16 +5909,16 @@ namespace RobloxFiles
 
         public ContentId MetalnessMap
         {
-            get => MetalnessMapContent;
-            set => MetalnessMapContent = value;
+            get { return MetalnessMapContent; }
+            set { MetalnessMapContent = value; }
         }
 
         public Content MetalnessMapContent = Content.None;
 
         public ContentId NormalMap
         {
-            get => NormalMapContent;
-            set => NormalMapContent = value;
+            get { return NormalMapContent; }
+            set { NormalMapContent = value; }
         }
 
         public Content NormalMapContent = Content.None;
@@ -5926,8 +5926,8 @@ namespace RobloxFiles
 
         public ContentId RoughnessMap
         {
-            get => RoughnessMapContent;
-            set => RoughnessMapContent = value;
+            get { return RoughnessMapContent; }
+            set { RoughnessMapContent = value; }
         }
 
         public Content RoughnessMapContent = Content.None;
@@ -6011,8 +6011,8 @@ namespace RobloxFiles
     {
         public ContentId ColorMap
         {
-            get => ColorMapContent;
-            set => ColorMapContent = value;
+            get { return ColorMapContent; }
+            set { ColorMapContent = value; }
         }
 
         public Content ColorMapContent = Content.None;
@@ -6024,24 +6024,24 @@ namespace RobloxFiles
 
         public ContentId MetalnessMap
         {
-            get => MetalnessMapContent;
-            set => MetalnessMapContent = value;
+            get { return MetalnessMapContent; }
+            set { MetalnessMapContent = value; }
         }
 
         public Content MetalnessMapContent = Content.None;
 
         public ContentId NormalMap
         {
-            get => NormalMapContent;
-            set => NormalMapContent = value;
+            get { return NormalMapContent; }
+            set { NormalMapContent = value; }
         }
 
         public Content NormalMapContent = Content.None;
 
         public ContentId RoughnessMap
         {
-            get => RoughnessMapContent;
-            set => RoughnessMapContent = value;
+            get { return RoughnessMapContent; }
+            set { RoughnessMapContent = value; }
         }
 
         public Content RoughnessMapContent = Content.None;
@@ -6324,8 +6324,8 @@ namespace RobloxFiles
     {
         public ContentId ActivatedCursorIcon
         {
-            get => ActivatedCursorIconContent;
-            set => ActivatedCursorIconContent = value;
+            get { return ActivatedCursorIconContent; }
+            set { ActivatedCursorIconContent = value; }
         }
 
         public Content ActivatedCursorIconContent = Content.None;
@@ -6334,8 +6334,8 @@ namespace RobloxFiles
 
         public ContentId CursorIcon
         {
-            get => CursorIconContent;
-            set => CursorIconContent = value;
+            get { return CursorIconContent; }
+            set { CursorIconContent = value; }
         }
 
         public Content CursorIconContent = Content.None;
@@ -6570,8 +6570,8 @@ namespace RobloxFiles
 
         public ContentId MouseIcon
         {
-            get => MouseIconContent;
-            set => MouseIconContent = value;
+            get { return MouseIconContent; }
+            set { MouseIconContent = value; }
         }
 
         public Content MouseIconContent = Content.None;
@@ -6631,8 +6631,8 @@ namespace RobloxFiles
     {
         public double ConstrainedValue
         {
-            get => value;
-            set => this.value = value;
+            get { return value; }
+            set { this.value = value; }
         }
 
         public double MaxValue = 1;
@@ -6640,8 +6640,8 @@ namespace RobloxFiles
 
         public double Value
         {
-            get => value;
-            set => this.value = value;
+            get { return value; }
+            set { this.value = value; }
         }
 
         public double value = 0;
@@ -6651,8 +6651,8 @@ namespace RobloxFiles
     {
         public long ConstrainedValue
         {
-            get => value;
-            set => this.value = value;
+            get { return value; }
+            set { this.value = value; }
         }
 
         public long MaxValue = 10;
@@ -6660,8 +6660,8 @@ namespace RobloxFiles
 
         public long Value
         {
-            get => value;
-            set => this.value = value;
+            get { return value; }
+            set { this.value = value; }
         }
 
         public long value = 0;
@@ -6810,16 +6810,16 @@ namespace RobloxFiles
 
         public BasePart Part0
         {
-            get => Part0Internal;
-            set => Part0Internal = value;
+            get { return Part0Internal; }
+            set { Part0Internal = value; }
         }
 
         public BasePart Part0Internal;
 
         public BasePart Part1
         {
-            get => Part1Internal;
-            set => Part1Internal = value;
+            get { return Part1Internal; }
+            set { Part1Internal = value; }
         }
 
         public BasePart Part1Internal;

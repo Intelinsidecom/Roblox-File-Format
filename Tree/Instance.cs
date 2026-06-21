@@ -68,8 +68,8 @@ namespace RobloxFiles
         /// <summary>The internal serialized data of this Instance's attributes</summary>
         internal byte[] AttributesSerialize
         {
-            get => Attributes.Save();
-            set => Attributes.Load(value);
+            get { return Attributes.Save(); }
+            set { Attributes.Load(value); }
         }
 
         /// <summary>
@@ -127,16 +127,20 @@ namespace RobloxFiles
         /// <returns>True if the attribute could be read and the out value was set, false otherwise.</returns>
         public bool GetAttribute<T>(string key, out T value)
         {
-            if (Attributes.TryGetValue(key, out RbxAttribute attr))
+            RbxAttribute attr;
+
+            if (Attributes.TryGetValue(key, out attr))
             {
-                if (attr?.Value is T result)
+                if (attr != null && attr.Value is T)
                 {
+                    T result = (T)attr.Value;
+
                     value = result;
                     return true;
                 }
             }
 
-            value = default;
+            value = default(T);
             return false;
         }
 
@@ -202,7 +206,7 @@ namespace RobloxFiles
         /// </summary>
         public Instance Parent
         {
-            get => _parent;
+            get { return _parent; }
 
             set
             {
@@ -510,7 +514,8 @@ namespace RobloxFiles
                 if (oldParent == null)
                     continue;
 
-                if (!mitosis.TryGetValue(oldParent, out var newParent))
+                Instance newParent;
+                if (!mitosis.TryGetValue(oldParent, out newParent))
                     continue;
 
                 newInst.Parent = newParent;
@@ -519,17 +524,20 @@ namespace RobloxFiles
             // Patch referents where applicable.
             foreach (var prop in refProps)
             {
-                if (!(prop.Value is Instance source))
+                Instance source = prop.Value as Instance;
+                if (!(source != null))
                     continue;
 
-                if (!mitosis.TryGetValue(source, out var copy))
+                Instance copy;
+                if (!mitosis.TryGetValue(source, out copy))
                     continue;
 
                 prop.Value = copy;
             }
 
             // Grab the copy of ourselves that we created.
-            mitosis.TryGetValue(this, out Instance clone);
+            Instance clone;
+            mitosis.TryGetValue(this, out clone);
 
             return clone;
         }

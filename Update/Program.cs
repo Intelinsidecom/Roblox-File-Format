@@ -14,7 +14,11 @@ namespace RobloxFileFormat.Update
 {
     internal class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
+        {
+            RunAsync(args).Wait();
+        }
+        static async Task RunAsync(string[] args)
         {
             var outDir = Directory.GetCurrentDirectory();
             var info = new DirectoryInfo(outDir);

@@ -48,13 +48,13 @@ namespace RobloxFiles.Utility
         {
             get
             {
-                switch (member)
-                {
-                    case PropertyInfo prop:  return prop.PropertyType;
-                    case FieldInfo field:    return field.FieldType;
-                    
-                    default:                 return null;
-                }
+                if (member is PropertyInfo)
+                    return ((PropertyInfo)member).PropertyType;
+
+                if (member is FieldInfo)
+                    return ((FieldInfo)member).FieldType;
+
+                return null;
             }
         }
 
@@ -62,40 +62,28 @@ namespace RobloxFiles.Utility
         {
             object result = null;
 
-            switch (member)
-            {
-                case FieldInfo field:
-                {
-                    result = field.GetValue(obj);
-                    break;
-                }
-                case PropertyInfo prop:
-                {
-                    result = prop.GetValue(obj);
-                    break;
-                }
-            }
+            if (member is FieldInfo)
+                result = ((FieldInfo)member).GetValue(obj);
+            if (member is PropertyInfo)
+                result = ((PropertyInfo)member).GetValue(obj);
 
             return result;
         }
 
         public void SetValue(object obj, object value)
         {
-            switch (member)
+            if (member is FieldInfo)
             {
-                case FieldInfo field:
-                {
-                    field.SetValue(obj, value);
-                    return;
-                }
-                case PropertyInfo prop:
-                {
-                    prop.SetValue(obj, value);
-                    return;
-                }
+                ((FieldInfo)member).SetValue(obj, value);
             }
-            
-            RobloxFile.LogError($"Unknown field '{inputName}' in ImplicitMember.SetValue");
+            else if (member is PropertyInfo)
+            {
+                ((PropertyInfo)member).SetValue(obj, value);
+            }
+            else
+            {
+                RobloxFile.LogError($"Unknown field '{inputName}' in ImplicitMember.SetValue");
+            }
         }
     }
 }

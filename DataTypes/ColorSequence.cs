@@ -40,7 +40,8 @@ namespace RobloxFiles.DataTypes
 
         public override bool Equals(object obj)
         {
-            if (!(obj is ColorSequence colorSeq))
+            ColorSequence colorSeq = obj as ColorSequence;
+            if (!(colorSeq != null))
                 return false;
 
             var otherKeys = colorSeq.Keypoints;

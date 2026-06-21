@@ -234,7 +234,8 @@ namespace RobloxFiles.DataTypes
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Quaternion other))
+            Quaternion other = obj as Quaternion;
+            if (!(other != null))
                 return false;
 
             if (!X.Equals(other.X))

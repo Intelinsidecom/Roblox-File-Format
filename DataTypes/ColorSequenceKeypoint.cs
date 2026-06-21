@@ -30,7 +30,8 @@
 
         public override bool Equals(object obj)
         {
-            if (!(obj is ColorSequenceKeypoint otherKey))
+            ColorSequenceKeypoint otherKey = obj as ColorSequenceKeypoint;
+            if (!(otherKey != null))
                 return false;
 
             if (!Time.Equals(otherKey.Time))

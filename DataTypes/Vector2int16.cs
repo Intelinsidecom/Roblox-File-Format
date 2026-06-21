@@ -70,7 +70,9 @@ namespace RobloxFiles.DataTypes
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Vector2int16 other))
+
+            Vector2int16 other = obj as Vector2int16;
+            if (!(other != null))
                 return false;
 
             if (!X.Equals(other.X))

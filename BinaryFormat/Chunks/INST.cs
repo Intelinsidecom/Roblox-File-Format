@@ -55,7 +55,8 @@ namespace RobloxFiles.BinaryFormat.Chunks
                 var obj = Activator.CreateInstance(instType) as RbxObject;
                 obj.Referent = objId.ToString();
 
-                if (obj is Instance inst)
+                Instance inst = obj as Instance;
+                if (inst != null)
                 {
                     if (IsService && inst.IsService)
                     {
@@ -91,7 +92,8 @@ namespace RobloxFiles.BinaryFormat.Chunks
                 {
                     RbxObject obj = file.Objects[objId];
 
-                    if (obj is Instance service)
+                    Instance service = obj as Instance;
+                    if (service != null)
                     {
                         writer.Write(service.Parent == file);
                         continue;

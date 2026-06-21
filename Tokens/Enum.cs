@@ -16,7 +16,8 @@ namespace RobloxFiles.Tokens
         {
             Contract.Requires(prop != null);
 
-            if (XmlPropertyTokens.ReadPropertyGeneric(token, out uint value))
+            uint value;
+            if (XmlPropertyTokens.ReadPropertyGeneric(token, out value))
             {
                 RbxObject obj = prop.Object;
                 Type instType = obj?.GetType();
@@ -41,11 +42,11 @@ namespace RobloxFiles.Tokens
         {
             Contract.Requires(prop != null && node != null);
             object rawValue = prop.Value;
-            
-            if (!(rawValue is uint value))
+            uint value = 0;
+            if (!(rawValue is uint))
             {
                 Type type = rawValue.GetType();
-
+                value = (uint)rawValue;
                 if (type.IsEnum)
                 {
                     var signed = (int)rawValue;

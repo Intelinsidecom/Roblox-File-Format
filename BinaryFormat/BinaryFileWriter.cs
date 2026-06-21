@@ -184,7 +184,8 @@ namespace RobloxFiles.BinaryFormat
             string className = obj.ClassName;
             obj.Referent = objId.ToString();
 
-            if (!ClassMap.TryGetValue(className, out INST inst))
+            INST inst;
+            if (!ClassMap.TryGetValue(className, out inst))
             {
                 inst = new INST()
                 {
@@ -192,8 +193,8 @@ namespace RobloxFiles.BinaryFormat
                     ObjectIds = new List<int>(),
                     IsService = false
                 };
-
-                if (obj is Instance instance)
+                Instance instance = obj as Instance;
+                if (instance != null)
                     inst.IsService = instance.IsService;
 
                 ClassMap.Add(className, inst);

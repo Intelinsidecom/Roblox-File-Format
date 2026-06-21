@@ -32,9 +32,10 @@ namespace RobloxFiles.DataTypes
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Optional<T> optional))
+            if (!(obj is Optional<T>))
                 return false;
 
+            Optional<T> optional = (Optional<T>)obj;
             if (HasValue != optional.HasValue)
                 return false;
 

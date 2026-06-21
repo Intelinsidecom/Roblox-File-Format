@@ -116,9 +116,9 @@ namespace RobloxFiles
                                 reading = false;
                                 break;
                             }
-                            case string unhandled:
+                            default:
                             {
-                                LogError($"BinaryRobloxFile - Unhandled chunk-type: {unhandled}!");
+                                LogError($"BinaryRobloxFile - Unhandled chunk-type: {chunk.ChunkType}!");
                                 break;
                             }
                         }

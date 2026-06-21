@@ -61,7 +61,8 @@ namespace RobloxFiles.DataTypes
 
         public override bool Equals(object obj)
         {
-            if (!(obj is FontFace font))
+            FontFace font = obj as FontFace;
+            if (!(font != null))
                 return false;
 
             if (Family != font.Family)

@@ -21,7 +21,8 @@
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Region3int16 other))
+            Region3int16 other = obj as Region3int16;
+            if (!(other != null))
                 return false;
 
             if (!Min.Equals(other.Min))

@@ -13,8 +13,8 @@ namespace RobloxFiles.Tokens
         public bool ReadProperty(Property prop, XmlNode token)
         {
             Contract.Requires(prop != null);
-
-            if (XmlPropertyTokens.ReadPropertyGeneric(token, out uint value))
+            uint value;
+            if (XmlPropertyTokens.ReadPropertyGeneric(token, out value))
             {
                 Faces faces = (Faces)value;
                 prop.Value = faces;

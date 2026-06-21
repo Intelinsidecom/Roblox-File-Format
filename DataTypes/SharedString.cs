@@ -36,7 +36,8 @@ namespace RobloxFiles.DataTypes
 
         public override bool Equals(object obj)
         {
-            if (!(obj is SharedString other))
+            SharedString other = obj as SharedString;
+            if (!(other != null))
                 return false;
 
             return Key.Equals(other.Key);

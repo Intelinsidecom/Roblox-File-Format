@@ -44,7 +44,8 @@ namespace RobloxFiles.DataTypes
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Content content))
+            Content content = obj as Content;
+            if (!(content != null))
                 return false;
 
             if (SourceType != content.SourceType)

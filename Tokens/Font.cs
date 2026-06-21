@@ -22,7 +22,8 @@ namespace RobloxFiles.Tokens
                 var weight = (FontWeight)uint.Parse(weightNode.InnerText);
 
                 var styleNode = node["Style"];
-                Enum.TryParse(styleNode.InnerText, out FontStyle style);
+                FontStyle style;
+                Enum.TryParse(styleNode.InnerText, out style);
 
                 var cachedFaceNode = node["CachedFaceId"];
                 var cachedFaceId = cachedFaceNode?.InnerText;

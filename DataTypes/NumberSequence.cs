@@ -64,7 +64,8 @@ namespace RobloxFiles.DataTypes
 
         public override bool Equals(object obj)
         {
-            if (!(obj is NumberSequence numberSeq))
+            NumberSequence numberSeq = obj as NumberSequence;
+            if (!(numberSeq != null))
                 return false;
 
             var otherKeys = numberSeq.Keypoints;

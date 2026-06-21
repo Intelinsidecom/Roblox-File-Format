@@ -29,7 +29,8 @@
 
         public override bool Equals(object obj)
         {
-            if (!(obj is NumberSequenceKeypoint otherKey))
+            NumberSequenceKeypoint otherKey = obj as NumberSequenceKeypoint;
+            if (!(otherKey != null))
                 return false;
 
             if (!Time.Equals(otherKey.Time))

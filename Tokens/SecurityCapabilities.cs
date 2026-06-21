@@ -8,7 +8,8 @@ namespace RobloxFiles.Tokens
 
         public bool ReadProperty(Property prop, XmlNode node)
         {
-            if (ulong.TryParse(node.InnerText, out var value))
+            ulong value;
+            if (ulong.TryParse(node.InnerText, out value))
             {
                 prop.Value = (SecurityCapabilities)value;
                 return true;

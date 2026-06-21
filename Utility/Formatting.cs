@@ -46,13 +46,16 @@ internal static class Formatting
 
     public static string ToInvariantString(this object value)
     {
-        switch (value)
-        {
-            case double d : return d.ToInvariantString();
-            case float  f : return f.ToInvariantString();
-            case int    i : return i.ToInvariantString();
-            default       : return value.ToString();
-        }
+        if (value is double)
+            return ((double)value).ToInvariantString();
+
+        if (value is float)
+            return ((float)value).ToInvariantString();
+
+        if (value is int)
+            return ((int)value).ToInvariantString();
+
+        return value.ToString();
     }
 
     public static string ToLowerInvariant(this string str)

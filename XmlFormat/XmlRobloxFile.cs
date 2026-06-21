@@ -53,8 +53,9 @@ namespace RobloxFiles
             {
                 // Verify the version we are using.
                 XmlNode version = roblox.Attributes.GetNamedItem("version");
-                
-                if (version == null || !int.TryParse(version.Value, out int schemaVersion))
+
+                int schemaVersion;
+                if (version == null || !int.TryParse(version.Value, out schemaVersion))
                     throw new Exception("XmlRobloxFile: No version number defined!");
                 else if (schemaVersion < 4)
                     throw new Exception("XmlRobloxFile: Provided version must be at least 4!");

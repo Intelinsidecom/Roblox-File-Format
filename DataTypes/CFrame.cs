@@ -44,7 +44,8 @@ namespace RobloxFiles.DataTypes
 
         public override bool Equals(object obj)
         {
-            if (!(obj is CFrame other))
+            CFrame other = obj as CFrame;
+            if (!(other != null))
                 return false;
 
             var compA = GetComponents();
